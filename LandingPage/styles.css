@@ -171,6 +171,40 @@ a:hover {
     }
 }
 
+/* Your existing styles */
+
+.hero .moving-object {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 69, 0, 0.8);
+    border-radius: 50%;
+    animation: moveObject 10s linear infinite alternate;
+}
+
+.hero .square {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 128, 255, 0.8); /* Semi-transparent blue color */
+    position: absolute;
+    border-radius: 5px;
+    animation: moveObject 8s linear infinite alternate; /* Adjusted animation duration */
+}
+
+@keyframes moveObject {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50vw, 50vh);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Additional shapes and their animations can be added similarly */
+
 
 footer {
     background-color: #333;
