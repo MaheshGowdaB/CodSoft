@@ -1,37 +1,32 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #111;
+    background-color: #333; /* Dark background color for a professional look */
     color: #fff;
     padding: 1rem;
     z-index: 1000;
-    transition: background-color 0.3s ease, padding 0.3s ease;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header:hover {
-    background-color: #333;
+    background-color: #444; /* Darken the background on hover */
     padding: 1.5rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
 }
 
 ul {
@@ -47,36 +42,18 @@ a {
     text-decoration: none;
     color: #fff;
     font-size: 1.1rem;
-    transition: color 0.3s ease; /* Add color transition on hover */
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ff4500; /* Change link color on hover */
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #ff4500;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-.cta-button:hover {
-    color: #fff; /* Set the hover color for the "Get Started" button */
-}
-
-.logout-button {
-    display: flex;
-    align-items: center;
+    color: #ff4500;
 }
 
 .logout-button i {
     font-size: 1.5rem;
+    color: #fff;
 }
+
 
 .hero {
     position: relative;
@@ -125,33 +102,52 @@ a:hover {
     display: flex;
     justify-content: space-around;
     padding: 3rem 0;
-    animation: fadeInUp 1.5s ease-in-out; /* Add a fade-in animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
 }
 
 .feature {
     text-align: center;
     max-width: 300px;
-    margin: 1.5rem; /* Add margin for better spacing between features */
-    padding: 1.5rem; /* Add padding for a cleaner look */
-    background-color: rgb(255, 213, 60);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out; /* Add a subtle transform animation */
+    margin: 1.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Use a gradient for a futuristic look */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease; /* Add transitions */
+    color: #fff; /* Text color */
 }
 
 .feature:hover {
-    transform: translateY(-5px); /* Lift the feature on hover */
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #fd749b, #ff7f50); /* Darken the gradient on hover */
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Start slightly below and fade in */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Fade in and move to the original position */
+        transform: translateY(0);
     }
 }
+
+/* Add a subtle animation for the background gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 footer {
     background-color: #333;
